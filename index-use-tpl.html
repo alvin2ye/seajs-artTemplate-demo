@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>use tpl</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script type="text/javascript" src="/modules/seajs/3.0.0/sea.js"></script>
+    <script
+      type="text/javascript"
+      src="/modules/seajs-css/0.0.1/seajs-css.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/modules/seajs-text/1.1.1/seajs-text.js"
+    ></script>
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script>
+      seajs.config({
+        base: "",
+        alias: {
+          template: "/modules/art-template/4.13.2/template-web.js"
+        }
+      });
+
+      seajs.use("./index-use-tpl.js", function(Main) {
+        Main.init("content");
+      });
+    </script>
+  </body>
+</html>
